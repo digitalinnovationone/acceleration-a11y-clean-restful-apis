@@ -1,2 +1,1 @@
-# acceleration-a11y-clean-restful-apis
-DIO International Acceleration: Accessibility in Clean RESTful APIs.
+# DIO International Acceleration: Accessibility (A11y) in Clean RESTful APIs
