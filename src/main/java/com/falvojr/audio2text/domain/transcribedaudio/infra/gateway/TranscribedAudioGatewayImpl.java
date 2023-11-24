@@ -48,15 +48,13 @@ public record TranscribedAudioGatewayImpl(
 
     @Override
     public TranscribedAudio update(TranscribedAudio model) {
-        // Assuming that the content of the file doesn't change, only transcript metadata.
+        // Assuming that the content of the file doesn't change, only metadata.
         Query query = this.createQueryById(model.getId());
         Update update = new Update();
         update.set("metadata.%s".formatted(METADATA_TRANSCRIPT_FIELD), model.getTranscript());
 
-        // Perform the update operation using MongoTemplate.
-        UpdateResult result = this.mongoTemplate.updateFirst(query, update, GridFSFile.class);
-
-        // Check if the update was successful, if you need to handle it.
+        // Performs update operation on "fs.files" collection using MongoTemplate.
+        UpdateResult result = this.mongoTemplate.updateFirst(query, update, "fs.files");
         boolean success = result.wasAcknowledged() && result.getMatchedCount() > 0;
         return success ? model : null;
     }
