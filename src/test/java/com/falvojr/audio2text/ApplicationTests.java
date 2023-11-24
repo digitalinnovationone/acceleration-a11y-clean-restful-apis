@@ -1,10 +1,10 @@
-package com.falvojr.speech2learning;
+package com.falvojr.audio2text;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class AccelerationA11yCleanRestfulApisApplicationTests {
+class ApplicationTests {
 
 	@Test
 	void contextLoads() {

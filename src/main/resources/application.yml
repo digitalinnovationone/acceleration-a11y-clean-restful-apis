@@ -1,0 +1,13 @@
+spring:
+  data:
+    mongodb:
+      uri: ${MONGODB_URI}
+  servlet:
+    multipart:
+      enabled: true
+      max-request-size: 25MB
+      max-file-size: 25MB
+
+openai:
+  base-url: https://api.openai.com/v1
+  api-key: ${OPENAI_API_KEY}

@@ -1,13 +1,15 @@
-package com.falvojr.speech2learning;
+package com.falvojr.audio2text;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
+@EnableFeignClients
 @SpringBootApplication
-public class AccelerationA11yCleanRestfulApisApplication {
+public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AccelerationA11yCleanRestfulApisApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 
 }
