@@ -64,16 +64,28 @@ Our development team has outlined several key TODOs for further implementation a
 
 ### Environment Setup
 
-`TODO 1: Verify and set up the necessary environment variables for the project operation.`
+`TODO 1. Check/Create the mandatory environment variables!`
+> Code built hands-on:
+> https://github.com/digitalinnovationone/acceleration-a11y-clean-restful-apis/blob/adf20251609ed728f7379883492e280fe5aa58e3/src/main/resources/application.yml#L1
 
 ### Integration with OpenAI API to High-Quality Transcription
 
-`TODO 2: Implement the TranscriptionService contract to consume the "audio/transcription" endpoint of the OpenAI API.`
+OpenAI API Reference: https://platform.openai.com/docs/api-reference/audio/createTranscription
 
-`TODO 3: Orchestrate the integration of the transcription service within the application flow.`
+`TODO 2. Respecting the TranscriptionService contract, consumes "audio/transcription" on OpenAI API!`
+> Code built hands-on:
+> https://github.com/digitalinnovationone/acceleration-a11y-clean-restful-apis/blob/56c773e20fe899f9a54eb9e0dfa55d5e4f4a577a/src/main/java/com/falvojr/audio2text/domain/transcribedaudio/adapter/gateway/TranscriptionServiceImpl.java#L46
 
-## Accessibility Showcase:
+`TODO 3. Orchestrate the integration with transcription service.`
+> Code built hands-on:
+> https://github.com/digitalinnovationone/acceleration-a11y-clean-restful-apis/blob/a826c1e7ebf9dc41d390e601ec1ef93e8f7ca485/src/main/java/com/falvojr/audio2text/domain/transcribedaudio/usecase/CreateTranscribedAudioUC.java#L38
 
-`TODO 4: Use the JavaScript Fetch API to consume the "/transcribed-audios/{id}" endpoint and display the transcript in the front-end.`
+## Accessibility Showcase
 
-`TODO 5: Integrate with VLibras to provide accessibility support for Brazilian Sign Language translation.`
+`TODO4. Using the JavaScript Fetch API, consume the "/transcribed-audios/{id}" endpoint locally and display a transcript.`
+> Code built hands-on:
+> https://github.com/digitalinnovationone/acceleration-a11y-clean-restful-apis/blob/0352ce631321942cadd795d36e74df9dc38e60d7/src/main/resources/static/libras.html#L24
+
+`TODO 5. Integrate with VLibras: https://vlibras.gov.br/doc/widget/installation/webpageintegration.html`
+> Code built hands-on:
+> https://github.com/digitalinnovationone/acceleration-a11y-clean-restful-apis/blob/0352ce631321942cadd795d36e74df9dc38e60d7/src/main/resources/static/libras.html#L43
