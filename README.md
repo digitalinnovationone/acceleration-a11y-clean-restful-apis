@@ -50,7 +50,7 @@ class LOA,IRep entities_secondary;
 
 ### Key References and Inspirations:
 
-- **[Speech2Learning](https://github.com/falvojr/speech2learning)**: My doctoral project, showcasing the integration of speech-to-text services in a learning context.
+- **[Speech2Learning](https://github.com/falvojr/speech2learning)**: PhD project by [@falvojr](https://github.com/falvojr), which explores speech-to-text services to improve the accessibility of learning objects.
 - **[The Clean Architecture Blog Post](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)**: Robert C. Martin's (Uncle Bob) seminal post on Clean Architecture principles.
 - **[Clean Architecture for Spring Application](https://github.com/LuanPSantos/Clean-Architecture-For-Spring-Application)**: A comprehensive guide by LuanPSantos on implementing Clean Architecture in Spring applications.
 
