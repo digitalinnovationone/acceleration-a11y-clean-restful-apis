@@ -43,6 +43,9 @@ import java.util.Map;
 @FeignClient(name = "openai", url = "${openai.base-url}", configuration = TranscriptionServiceImpl.Config.class)
 public interface TranscriptionServiceImpl extends TranscriptionService {
 
+    // DONE! 2. Respecting the TranscriptionService contract, consumes "audio/transcription" on OpenAI API!
+    // OpenAI API Reference: https://platform.openai.com/docs/api-reference/audio/createTranscription
+
     @PostMapping(value = "/audio/transcriptions", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     String generateTranscript(Map<String, ?> formData);
 
@@ -69,9 +72,6 @@ public interface TranscriptionServiceImpl extends TranscriptionService {
             throw new RuntimeException("File copy error on OpenAI integration", ioException);
         }
     }
-
-    // DONE! 2. Respecting the TranscriptionService contract, consumes "audio/transcription" on OpenAI API!
-    // OpenAI API Reference: https://platform.openai.com/docs/api-reference/audio/createTranscription
 
     class Config {
 
