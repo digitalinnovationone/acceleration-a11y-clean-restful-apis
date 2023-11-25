@@ -1,4 +1,4 @@
-# TODO 1. Check/Create the mandatory environment variables!
+# DONE! 1. Check/Create the mandatory environment variables!
 
 spring:
   data:

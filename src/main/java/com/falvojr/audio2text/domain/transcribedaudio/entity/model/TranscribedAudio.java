@@ -35,8 +35,8 @@ public class TranscribedAudio {
     private static final List<String> VALID_EXTENSIONS = Arrays.asList("flac", "m4a", "mp3", "mp4", "mpeg", "mpga", "oga", "ogg", "wav", "webm");
 
     public void validate() {
-        if (isNullOrEmpty(name) || isNull(content)) {
-            throw new EnterpriseBusinessException("Name and audio content are required.");
+        if (isNullOrEmpty(name) || isNullOrEmpty(transcript) || isNull(content)) {
+            throw new EnterpriseBusinessException("Name, transcript and audio content are required.");
         }
         String extension = FileUtils.getExtension(name).toLowerCase();
         if (!VALID_EXTENSIONS.contains(extension)) {

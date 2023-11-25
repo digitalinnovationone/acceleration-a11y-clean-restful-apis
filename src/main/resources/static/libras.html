@@ -21,11 +21,37 @@
     });
 
     function fetchTranscript(id) {
-        <!-- TODO 4. Using JavaScript Fetch API, consume "/transcribed-audios/{id}" endpoint and display transcript -->
+        <!-- DONE! 4. Using JavaScript Fetch API, consume "/transcribed-audios/{id}" endpoint and display transcript -->
+        fetch(`http://localhost:8080/transcribed-audios/${id}`)
+            .then(response => {
+                if (!response.ok) {
+                    return response.text().then(text => {
+                        throw new Error(text || 'Ocorreu um erro desconhecido.');
+                    })
+                }
+                return response.json();
+            })
+            .then(data => {
+                document.getElementById('transcriptDisplay').textContent = data.transcript
+            })
+            .catch(error => {
+                console.error('Houve um problema com a operação de fetch: ', error);
+            })
     }
 </script>
 
-<!-- TODO 5. Integrate with VLibras: https://vlibras.gov.br/doc/widget/installation/webpageintegration.html -->
+<!-- DONE! 5. Integrate with VLibras: https://vlibras.gov.br/doc/widget/installation/webpageintegration.html -->
+
+<div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+    </div>
+</div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+    new window.VLibras.Widget();
+</script>
 
 </body>
 </html>

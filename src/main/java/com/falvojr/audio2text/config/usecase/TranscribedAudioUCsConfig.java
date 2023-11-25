@@ -27,7 +27,8 @@ import org.springframework.context.annotation.Configuration;
 public class TranscribedAudioUCsConfig {
 
     @Bean
-    CreateTranscribedAudioUC createTranscribedAudioUC(TranscribedAudioRepository modelRepository, TranscriptionService sttService) {
+    CreateTranscribedAudioUC createTranscribedAudioUC(TranscribedAudioRepository modelRepository,
+                                                      TranscriptionService sttService) {
         return new CreateTranscribedAudioUC(modelRepository, sttService);
     }
 
