@@ -2,14 +2,14 @@ package com.falvojr.audio2text.domain.transcribedaudio.usecase;
 
 import com.falvojr.audio2text.config.exception.ApplicationBusinessException;
 import com.falvojr.audio2text.config.exception.EnterpriseBusinessException;
-import com.falvojr.audio2text.domain.transcribedaudio.entity.gateway.TranscribedAudioGateway;
+import com.falvojr.audio2text.domain.transcribedaudio.entity.gateway.TranscribedAudioRepository;
 import com.falvojr.audio2text.domain.transcribedaudio.entity.model.TranscribedAudio;
 
-public record ReadTranscribedAudioUC(TranscribedAudioGateway modelGateway) {
+public record ReadTranscribedAudioUC(TranscribedAudioRepository repository) {
 
     public Output execute(Input input) {
         try {
-            TranscribedAudio transcribedAudio = this.modelGateway.findById(input.id())
+            TranscribedAudio transcribedAudio = this.repository.findById(input.id())
                     .orElseThrow(() -> new ApplicationBusinessException("Audio transcript not found."));
 
             return new Output(transcribedAudio);

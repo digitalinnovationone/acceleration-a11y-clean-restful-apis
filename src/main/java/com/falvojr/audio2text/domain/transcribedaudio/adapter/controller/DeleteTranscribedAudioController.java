@@ -1,4 +1,4 @@
-package com.falvojr.audio2text.domain.transcribedaudio.infra.controller;
+package com.falvojr.audio2text.domain.transcribedaudio.adapter.controller;
 
 import com.falvojr.audio2text.domain.transcribedaudio.usecase.DeleteTranscribedAudioUC;
 import com.falvojr.audio2text.domain.transcribedaudio.usecase.DeleteTranscribedAudioUC.Input;

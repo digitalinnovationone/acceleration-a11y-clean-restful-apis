@@ -10,6 +10,21 @@ import java.util.List;
 import static com.falvojr.audio2text.util.StringUtils.isNullOrEmpty;
 import static java.util.Objects.isNull;
 
+/**
+ * Domain model for TranscribedAudio.
+ * Represents an audio file and its associated transcript in the domain layer.
+ * Encapsulates the core business logic related to handling audio and transcript data. <br>
+ * <br>
+ * Responsibilities: <br>
+ * - Hold the properties of an audio file, including its ID, name, content (audio stream), and transcript. <br>
+ * - Validate the integrity and conformity of the audio file data, ensuring it meets business rules. <br>
+ * <br>
+ * Adherence to Clean Architecture: <br>
+ * - As a domain entity, it is central to the enterprise business logic and rules of the application. <br>
+ * - Independent of any external frameworks or data persistence mechanisms.
+ *
+ * @author falvojr
+ */
 public class TranscribedAudio {
 
     private String id;

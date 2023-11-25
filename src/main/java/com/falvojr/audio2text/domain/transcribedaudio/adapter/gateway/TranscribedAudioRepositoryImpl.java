@@ -1,6 +1,6 @@
-package com.falvojr.audio2text.domain.transcribedaudio.infra.gateway;
+package com.falvojr.audio2text.domain.transcribedaudio.adapter.gateway;
 
-import com.falvojr.audio2text.domain.transcribedaudio.entity.gateway.TranscribedAudioGateway;
+import com.falvojr.audio2text.domain.transcribedaudio.entity.gateway.TranscribedAudioRepository;
 import com.falvojr.audio2text.domain.transcribedaudio.entity.model.TranscribedAudio;
 import com.mongodb.BasicDBObject;
 import com.mongodb.DBObject;
@@ -21,11 +21,26 @@ import java.util.Optional;
 import static java.util.Objects.nonNull;
 import static java.util.Optional.ofNullable;
 
+/**
+ * Adapter class for TranscribedAudio persistence, handling data interactions with MongoDB's GridFS.
+ * This implementation of {@link TranscribedAudioRepository} ensures decoupling of domain and
+ * persistence logic in adherence to Clean Architecture principles. <br>
+ * <br>
+ * Responsibilities: <br>
+ * - Perform CRUD operations for TranscribedAudio entities. <br>
+ * - Convert between GridFSFile and TranscribedAudio model. <br>
+ * - Manage GridFS metadata and content storage. <br>
+ * <br>
+ * Adherence to Clean Architecture: <br>
+ * - Implements domain-defined repository interface, maintaining domain's independence. <br>
+ * - Allows for substitution with alternative storage mechanisms, adhering to the dependency inversion principle.
+ *
+ * @author falvojr
+ */
 @Service
-public record TranscribedAudioGatewayImpl(
-        GridFsTemplate gridFsTemplate,
-        GridFsOperations gridFsOps,
-        MongoTemplate mongoTemplate) implements TranscribedAudioGateway {
+public record TranscribedAudioRepositoryImpl(GridFsTemplate gridFsTemplate,
+                                             GridFsOperations gridFsOps,
+                                             MongoTemplate mongoTemplate) implements TranscribedAudioRepository {
 
     private static final String METADATA_TRANSCRIPT_FIELD = "transcript";
 

@@ -1,4 +1,4 @@
-package com.falvojr.audio2text.domain.transcribedaudio.infra.controller;
+package com.falvojr.audio2text.domain.transcribedaudio.adapter.controller;
 
 import com.falvojr.audio2text.domain.transcribedaudio.entity.model.TranscribedAudio;
 import com.falvojr.audio2text.domain.transcribedaudio.usecase.ReadTranscribedAudioUC;

@@ -1,3 +1,5 @@
+# TODO 1. Check/Create the mandatory environment variables!
+
 spring:
   data:
     mongodb:
