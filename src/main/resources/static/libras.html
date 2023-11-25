@@ -21,7 +21,7 @@
     });
 
     function fetchTranscript(id) {
-        <!-- DONE! 4. Using JavaScript Fetch API, consume "/transcribed-audios/{id}" endpoint and display transcript -->
+        // DONE! 4. Using JavaScript Fetch API, consume "/transcribed-audios/{id}" endpoint and display transcript.
         fetch(`http://localhost:8080/transcribed-audios/${id}`)
             .then(response => {
                 if (!response.ok) {
