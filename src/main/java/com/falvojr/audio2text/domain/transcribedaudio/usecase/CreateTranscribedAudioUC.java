@@ -35,6 +35,9 @@ public record CreateTranscribedAudioUC(TranscribedAudioRepository repository, Tr
             audio.setName(input.fileName());
             audio.setContent(input.fileContent());
 
+            // DONE! 3. Orchestrate the integration with transcription service.
+            // Remember that every TranscribedAudio must have a transcript before it can be saved!
+            
             try {
                 String transcript = sttService.generateTranscript(audio.getName(), audio.getContent());
                 audio.setTranscript(transcript);
