@@ -1,6 +1,10 @@
-# DIO Acceleration: Accessibility (A11y) in Clean RESTful APIs
+# Accessibility (A11y) in Clean RESTful APIs
 
-## Overview
+Discover how to combine the concepts of Clean Architecture with the Speech-To-Text (STT) concept to promote accessibility for audible educational content and harness the power of Java, Spring Boot, and MongoDB in building a RESTful API focused on accurate audio transcription.
+
+Presentation slides available here: [DIO Acceleration: Accessibility in Clean RESTful APIs](https://bit.ly/DIO-11-25)
+
+## Hands-On Overview
 
 The Audio2Text project is an advanced system designed to transcribe audio content into text format, leveraging the power of OpenAI's API for high-quality transcriptions. The project follows Clean Architecture principles to ensure a scalable, maintainable, and well-organized codebase.
 
@@ -70,6 +74,6 @@ Our development team has outlined several key TODOs for further implementation a
 
 ## Accessibility Showcase:
 
-`TODO 4: Use JavaScript Fetch API to consume the "/transcribed-audios/{id}" endpoint and display the transcript in the front-end.`
+`TODO 4: Use the JavaScript Fetch API to consume the "/transcribed-audios/{id}" endpoint and display the transcript in the front-end.`
 
 `TODO 5: Integrate with VLibras to provide accessibility support for Brazilian Sign Language translation.`
