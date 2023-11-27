@@ -72,7 +72,7 @@ Our development team has outlined several key TODOs for further implementation a
 
 OpenAI API Reference: https://platform.openai.com/docs/api-reference/audio/createTranscription
 
-`TODO 2. Respecting the TranscriptionService contract, consumes "audio/transcription" on OpenAI API!`
+`TODO 2. Respecting the TranscriptionService contract, consumes POST "audio/transcription" on OpenAI API!`
 > Code built hands-on:
 > https://github.com/digitalinnovationone/acceleration-a11y-clean-restful-apis/blob/56c773e20fe899f9a54eb9e0dfa55d5e4f4a577a/src/main/java/com/falvojr/audio2text/domain/transcribedaudio/adapter/gateway/TranscriptionServiceImpl.java#L46
 
@@ -82,10 +82,12 @@ OpenAI API Reference: https://platform.openai.com/docs/api-reference/audio/creat
 
 ## Accessibility Showcase
 
-`TODO4. Using the JavaScript Fetch API, consume the "/transcribed-audios/{id}" endpoint locally and display a transcript.`
+VLibras Widget Reference: https://vlibras.gov.br/doc/widget/installation/webpageintegration.html
+
+`TODO4. Using the JavaScript Fetch API, consumes GET "/transcribed-audios/{id}" locally and show the transcript.`
 > Code built hands-on:
 > https://github.com/digitalinnovationone/acceleration-a11y-clean-restful-apis/blob/fd9f73cae6501832cc0d5048f16e36dc199fe2c1/src/main/resources/static/libras.html#L24
 
-`TODO 5. Integrate with VLibras: https://vlibras.gov.br/doc/widget/installation/webpageintegration.html`
+`TODO 5. Integrate with VLibras: https://vlibras.gov.br/doc/widget`
 > Code built hands-on:
 > https://github.com/digitalinnovationone/acceleration-a11y-clean-restful-apis/blob/fd9f73cae6501832cc0d5048f16e36dc199fe2c1/src/main/resources/static/libras.html#L43
