@@ -84,7 +84,7 @@ OpenAI API Reference: https://platform.openai.com/docs/api-reference/audio/creat
 
 VLibras Widget Reference: https://vlibras.gov.br/doc/widget/installation/webpageintegration.html
 
-`TODO4. Using the JavaScript Fetch API, consumes GET "/transcribed-audios/{id}" locally and show the transcript.`
+`TODO 4. Using the JS Fetch API, consumes GET "/transcribed-audios/{id}" locally and show the transcript.`
 > Code built hands-on:
 > https://github.com/digitalinnovationone/acceleration-a11y-clean-restful-apis/blob/fd9f73cae6501832cc0d5048f16e36dc199fe2c1/src/main/resources/static/libras.html#L24
 
